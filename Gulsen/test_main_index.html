@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Quality Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Nighttime Background with Stars */
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            background: linear-gradient(120deg, #2d2b7b, #3b007e);
+            color: white;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Adding stars in the background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.3; /* Transparent star layer */
+            z-index: -1;  /* Behind all other elements */
+        }
+
+        /* Navbar Styling - Updated for Night Theme */
+        .navbar {
+            background-color: #1f1147;
+            overflow: hidden;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navbar a:hover {
+            background-color: #663399;
+            color: white;
+        }
+
+        /* Header Styling - Darker theme */
+        header {
+            background-color: #3b007e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Section Styling */
+        section {
+            background-color: rgba(75, 0, 130, 0.8);
+            padding: 20px;
+            margin: 20px auto;
+            width: 60%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        /* Form Layout */
+        form {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* Form Inputs */
+        input, select {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: #2d2b7b;
+        }
+
+        /* Form Labels */
+        label {
+            text-align: right;
+            padding-right: 10px;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Button Styling - Purple Theme */
+        button {
+            padding: 10px 15px;
+            background-color: #663399;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            grid-column: span 2;
+        }
+
+        button:hover {
+            background-color: #552b91;
+        }
+
+        /* Centered Text */
+        header h1, section h2, p {
+            margin: 0 0 15px;
+            color: white;
+        }
+
+        /* Links */
+        .btn {
+            background-color: #663399;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #552b91;
+        }
+
+        /* Footer Links */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* FAQ Section */
+        #faq {
+            background-color: rgba(45, 43, 123, 0.8);
+            padding: 20px;
+            margin: 20px auto;
+            width: 60%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+
+        #faq h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        #faq p {
+            text-align: left;
+            margin-bottom: 15px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#input">Input Data</a>
+        <a href="#faq">FAQ</a>
+    </div>
+
+    <header id="home">
+        <h1>Welcome to the Sleep Quality Analysis Tool</h1>
+        <p>Analyze your sleep quality based on stress, BMI, and blood pressure.</p>
+        <a href="#input" class="btn">Get Started</a>
+    </header>
+
+    <section id="input">
+        <h2>Input Your Data for Sleep Quality Analysis</h2>
+        <form id="user-data-form" action="/submit" method="POST">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation">
+
+            <label for="sleep-duration">Sleep Duration (hours):</label>
+            <input type="number" id="sleep-duration" name="sleepDuration" required>
+
+            <label for="stress-level">Stress Level (1-10):</label>
+            <input type="number" id="stress-level" name="stressLevel" min="1" max="10" required>
+
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" name="bmi" step="0.1" required>
+
+            <label for="blood-pressure">Blood Pressure (Systolic/Diastolic):</label>
+            <input type="text" id="blood-pressure" name="bloodPressure" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="results">
+        <h2>Your Sleep Quality Results</h2>
+        <div id="results-container">
+            <p>Thank you for submitting your data!</p>
+            <p>Your sleep quality analysis results will appear here.</p>
+        </div>
+        <a href="#input" class="btn">Input New Data</a>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>Q: What data do I need to provide for the sleep analysis?</strong></p>
+        <p>A: You will need to input your age, gender, occupation, sleep duration, stress level, BMI, and blood pressure for the analysis.</p>
+        
+        <p><strong>Q: How accurate is the sleep quality analysis?</strong></p>
+        <p>A: The analysis is based on data collected from previous research and health guidelines, but it should not replace medical advice. It provides an estimate based on your input data.</p>
+
+        <p><strong>Q: Can I use the tool on mobile devices?</strong></p>
+        <p>A: Yes, the tool is designed to be responsive and can be used on most modern smartphones and tablets.</p>
+    </section>
+
+</body>
+</html>
