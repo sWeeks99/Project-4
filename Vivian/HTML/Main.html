@@ -198,36 +198,48 @@
 
     <section id="input">
         <h2>Input Your Data for Sleep Quality Analysis</h2>
+        <h4>Let's get to know you!</h4>
         <form id="user-data-form" action="/submit" method="POST">
-            <label for="age">Age:</label>
+            <label for="age">How old are you?</label>
             <input type="number" id="age" name="age" required>
             
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender">
+            <label for="gender">What's your gender?</label>
+            <select id="gender" name="gender"required>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
 
-            <label for="Occupation Field">Occupation:</label>
-            <select id="gender" name="gender">
+            <label for="occupation">What's your field of work?</label>
+            <select id="occupation" name="Occupation">
                 <option value="Healthcare">Healthcare</option>
-                <option value="Office">Office</option>
                 <option value="Engineering">Engineering</option>
-                <option value="Food Service">Food Service</option>
-                <option value="Other">Other</option>
+                <option value="Business">Business</option>
+                <option value="Science">Science</option>
+                <option value="Education">Education</option>
+                <option value="Law">Law</option>
+                <option value="Manager">Manager</option>
             </select>
-            <label for="sleep-duration">Sleep Duration (hours):</label>
-            <input type="number" id="sleep-duration" name="sleepDuration" required>
 
-            <label for="stress-level">Stress Level (1-10):</label>
-            <input type="number" id="stress-level" name="stressLevel" min="1" max="10" required>
+            <label for="stress_level">What's your stress level? (1-10)</label>
+            <input type="number" id="stress-level" name="stressLevel" min="1" max="10" placeholder="1(none) to 10 (extremely stressed)" required>
 
-            <label for="bmi">BMI:</label>
-            <input type="number" id="bmi" name="bmi" step="0.1" required>
+            <label for="sleep_duration">How many hours do you sleep at night?</label>
+            <input type="number" id="sleep-duration" name="sleepDuration" min="1" max="24" required>
 
-            <label for="blood-pressure">Blood Pressure (Systolic/Diastolic):</label>
-            <input type="text" id="blood-pressure" name="bloodPressure" required>
+            <label for="BMI">What would you consider yourself?</label>
+            <select id="bmi" name="BMI">
+                <option value="Normal weight">Normal weight</option>
+                <option value="Overweight">Overweight</option>
+                <option value="Obese">Obese</option>
+            </select>
 
+            <h4 style="text-align: center;">Blood Pressure</h4>
+            <br>
+            <label for="blood_pressure_sys">Systolic</label>
+            <input type="text" id="systolic" name="systolic" placeholder="top number" min="40" max="195"required>
+            <label for="blood_pressure_dia">Diastolic</label>
+            <input type="text" id="diastolic" name="diastolic" placeholder="bottom number" min="55" max="100"required>
+            
             <button type="submit">Submit</button>
         </form>
     </section>
@@ -253,6 +265,8 @@
         <p><strong>Q: Can I use the tool on mobile devices?</strong></p>
         <p>A: Yes, the tool is designed to be responsive and can be used on most modern smartphones and tablets.</p>
     </section>
+    
+    <!-- Stars Background -->
     <div id="stars"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
