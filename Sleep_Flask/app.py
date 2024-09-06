@@ -3,10 +3,10 @@ import pandas as pd
 import joblib  # Assuming you saved your model using joblib
 app = Flask(__name__)
 # Load your pre-trained model
-logistic_model = joblib.load('log_regression_model.pkl')
+logistic_model = joblib.load('../Final_Data/Resources/log_regression_model.pkl')
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('test.html')
 @app.route('/predict', methods=['POST'])
 def predict():
     # Extract form data

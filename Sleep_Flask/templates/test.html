@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Disorder Prediction</title>
+</head>
+<body>
+    <h2>Enter your details to predict sleep disorder</h2>
+    <form action="/predict" method="post">
+        <!-- Input fields for each feature -->
+        Age: <input type="number" name="Age"><br>
+        Sleep Duration: <input type="number" step="0.1" name="Sleep_Duration"><br>
+        Quality of Sleep: <input type="number" name="Quality_of_Sleep"><br>
+        Physical Activity Level: <input type="number" name="Physical_Activity_Level"><br>
+        Stress Level: <input type="number" name="Stress_Level"><br>
+        Heart Rate: <input type="number" name="Heart_Rate"><br>
+        Daily Steps: <input type="number" name="Daily_Steps"><br>
+        Systolic: <input type="number" name="systolic"><br>
+        Diastolic: <input type="number" name="diastolic"><br>
+        Gender (Female): <input type="checkbox" name="Gender_Female"><br>
+        <!-- Add input fields for all other features, such as occupation and BMI categories -->
+        <!-- Add Submit Button -->
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
