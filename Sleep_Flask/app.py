@@ -2,8 +2,8 @@ from flask import Flask, render_template, request
 import pandas as pd
 import joblib  # Assuming you saved your model using joblib
 app = Flask(__name__)
-# Load your pre-trained model (replace with your model file)
-logistic_model = joblib.load('logistic_model.pkl')
+# Load your pre-trained model
+logistic_model = joblib.load('log_regression_model.pkl')
 @app.route('/')
 def home():
     return render_template('index.html')
