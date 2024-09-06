@@ -18,8 +18,36 @@
         Daily Steps: <input type="number" name="Daily_Steps"><br>
         Systolic: <input type="number" name="systolic"><br>
         Diastolic: <input type="number" name="diastolic"><br>
-        Gender (Female): <input type="checkbox" name="Gender_Female"><br>
-        <!-- Add input fields for all other features, such as occupation and BMI categories -->
+        Gender: 
+        <select name="Gender">
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+        </select><br>
+
+        <!-- Occupation Dropdown -->
+        Occupation:
+        <select name="Occupation">
+            <option value="Accountant">Accountant</option>
+            <option value="Doctor">Doctor</option>
+            <option value="Engineer">Engineer</option>
+            <option value="Lawyer">Lawyer</option>
+            <option value="Manager">Manager</option>
+            <option value="Nurse">Nurse</option>
+            <option value="Sales Representative">Sales Representative</option>
+            <option value="Salesperson">Salesperson</option>
+            <option value="Scientist">Scientist</option>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Teacher">Teacher</option>
+        </select><br>
+
+        <!-- BMI Category Dropdown -->
+        BMI Category:
+        <select name="BMI_Category">
+            <option value="Normal">Normal</option>
+            <option value="Obese">Obese</option>
+            <option value="Overweight">Overweight</option>
+        </select><br>
+
         <!-- Add Submit Button -->
         <input type="submit" value="Predict">
     </form>
