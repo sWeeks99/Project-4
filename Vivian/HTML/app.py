@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 # Load your pre-trained model (replace with your model file)
 logistic_model = joblib.load('../Final_Data/Resoturces/log_regression_model.pkl')
-
 @app.route('/')
 def home():
     return render_template('test.html')
