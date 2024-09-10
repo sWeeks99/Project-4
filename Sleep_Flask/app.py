@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-# Load your pre-trained model (replace with your model file)
+# Load pre-trained model 
 model_path = os.path.join('..', 'Final_Data', 'Resources', 'log_regression_model.pkl')
 logistic_model = joblib.load(model_path)
 
@@ -15,7 +15,7 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    # Extract form data
+    # Initialize data for user input on website
     age = int(request.form['Age'])
     sleep_duration = float(request.form['Sleep_Duration'])
     quality_of_sleep = int(request.form['Quality_of_Sleep'])
@@ -26,7 +26,7 @@ def predict():
     systolic = int(request.form['systolic'])
     diastolic = int(request.form['diastolic'])
     
-    # Handle Gender
+    #Initialize gender dummies for request
     gender_female = 1 if request.form['Gender'] == 'Female' else 0
     gender_male = 1 if request.form['Gender'] == 'Male' else 0
 
