@@ -1,14 +1,17 @@
 from flask import Flask, render_template, request
 import pandas as pd
-import joblib  # Assuming you saved your model using joblib
+import joblib
+import os
 
 app = Flask(__name__)
 
 # Load your pre-trained model (replace with your model file)
-logistic_model = joblib.load('../Final_Data/Resoturces/log_regression_model.pkl')
+model_path = os.path.join('..', 'Final_Data', 'Resources', 'log_regression_model.pkl')
+logistic_model = joblib.load(model_path)
+
 @app.route('/')
 def home():
-    return render_template('test.html')
+    return render_template('Main.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -65,9 +68,11 @@ def predict():
         **bmi_data  # Unpack BMI dummy variables
     }
 
+    
     # Convert to DataFrame
     input_df = pd.DataFrame([input_data])
-    
+   
+    print(input_df)
     # Make prediction using the logistic regression model
     prediction = logistic_model.predict(input_df)
     
