@@ -8,19 +8,41 @@
     <!-- Google Fonts for better typography -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        /* Body Styling */
+        /* Nighttime Background with Moving Stars */
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 16px;
             line-height: 1.6;
-            background: linear-gradient(120deg, #2d2b7b, #3b007e);
+            background: linear-gradient(120deg, #1e1d4a, #380f67);
             color: white;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            position: relative;
         }
 
-        /* Navbar Styling */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: url('https://png.pngtree.com/png-clipart/20200701/ourmid/pngtree-abstract-star-space-transparency-background-png-image_2269444.jpg') repeat;
+            opacity: 0.3;
+            z-index: -1;
+            animation: moveStars 60s linear infinite;
+        }
+
+        @keyframes moveStars {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
         .navbar {
             background-color: #1f1147;
             overflow: hidden;
@@ -37,21 +59,19 @@
         }
 
         .navbar a:hover {
-            background-color: #663399;
+            background-color: #473b6f;
             color: white;
         }
 
-        /* Header Styling */
         header {
-            background-color: #3b007e;
+            background-color: #3b007eac;
             color: white;
             padding: 20px;
             text-align: center;
         }
 
-        /* Section Styling */
         section {
-            background-color: rgba(75, 0, 130, 0.8);
+            background-color: rgba(76, 18, 117, 0.556);
             padding: 20px;
             margin: 20px auto;
             width: 60%;
@@ -60,16 +80,14 @@
             text-align: center;
         }
 
-        /* Form Layout */
         form {
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 10px;
+            grid-template-columns: 1fr 3fr;
+            gap: 15px;
             align-items: center;
             margin-top: 20px;
         }
 
-        /* Form Inputs */
         input, select {
             padding: 10px;
             font-size: 16px;
@@ -78,17 +96,17 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             color: #2d2b7b;
+            box-sizing: border-box;
         }
 
-        /* Form Labels */
         label {
             text-align: right;
             padding-right: 10px;
             font-weight: bold;
             color: white;
+            box-sizing: border-box;
         }
 
-        /* Button Styling */
         button {
             padding: 10px 15px;
             background-color: #663399;
@@ -104,13 +122,11 @@
             background-color: #552b91;
         }
 
-        /* Centered Text */
         header h1, section h2, p {
             margin: 0 0 15px;
             color: white;
         }
 
-        /* Links */
         .btn {
             background-color: #663399;
             color: white;
@@ -125,13 +141,11 @@
             background-color: #552b91;
         }
 
-        /* Footer Links */
         footer {
             text-align: center;
             margin-top: 20px;
         }
 
-        /* FAQ Section */
         #faq {
             background-color: rgba(45, 43, 123, 0.8);
             padding: 20px;
@@ -165,53 +179,58 @@
 
     <header id="home">
         <h1>Welcome to the Sleep Quality Analysis Tool</h1>
-        <p>Analyze your sleep quality based on various factors.</p>
+        <p>Analyze whether you have a sleep disorder based on quality of sleep, stress and health!</p>
         <a href="#input" class="btn">Get Started</a>
     </header>
 
     <section id="input">
-        <h2>Input Your Data for Sleep Quality Analysis</h2>
-        <form id="user-data-form" action="/predict" method="POST">
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="Age" required>
-            
-            <label for="gender">Gender:</label>
-            <select id="gender" name="Gender_Female">
-                <option value="0">Male</option>
-                <option value="1">Female</option>
-            </select>
+        <h2>Enter your details to predict sleep disorder</h2>
+        <form id="user-data-form" action="/predict" method="post">
+            Age: <input type="number" name="Age"><br>
+            Sleep Duration: <input type="number" step="0.1" name="Sleep_Duration"><br>
+            Quality of Sleep: <input type="number" name="Quality_of_Sleep"><br>
+            Physical Activity Level: <input type="number" name="Physical_Activity_Level"><br>
+            Stress Level: <input type="number" name="Stress_Level"><br>
+            Heart Rate: <input type="number" name="Heart_Rate"><br>
+            Daily Steps: <input type="number" name="Daily_Steps"><br>
+            Systolic: <input type="number" name="systolic"><br>
+            Diastolic: <input type="number" name="diastolic"><br>
+            Gender: 
+            <select name="Gender">
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+            </select><br>
 
-            <label for="sleep-duration">Sleep Duration (hours):</label>
-            <input type="number" id="sleep-duration" name="Sleep_Duration" required>
+            Occupation:
+            <select name="Occupation">
+                <option value="Accountant">Accountant</option>
+                <option value="Doctor">Doctor</option>
+                <option value="Engineer">Engineer</option>
+                <option value="Lawyer">Lawyer</option>
+                <option value="Manager">Manager</option>
+                <option value="Nurse">Nurse</option>
+                <option value="Sales Representative">Sales Representative</option>
+                <option value="Salesperson">Salesperson</option>
+                <option value="Scientist">Scientist</option>
+                <option value="Software Engineer">Software Engineer</option>
+                <option value="Teacher">Teacher</option>
+            </select><br>
 
-            <label for="quality-of-sleep">Quality of Sleep (1-10):</label>
-            <input type="number" id="quality-of-sleep" name="Quality_of_Sleep" min="1" max="10" required>
+            BMI Category:
+            <select name="BMI_Category">
+                <option value="Normal">Normal</option>
+                <option value="Obese">Obese</option>
+                <option value="Overweight">Overweight</option>
+            </select><br>
 
-            <label for="physical-activity-level">Physical Activity Level (1-10):</label>
-            <input type="number" id="physical-activity-level" name="Physical_Activity_Level" min="1" max="10" required>
-
-            <label for="stress-level">Stress Level (1-10):</label>
-            <input type="number" id="stress-level" name="Stress_Level" min="1" max="10" required>
-
-            <label for="heart-rate">Heart Rate:</label>
-            <input type="number" id="heart-rate" name="Heart_Rate" required>
-
-            <label for="daily-steps">Daily Steps:</label>
-            <input type="number" id="daily-steps" name="Daily_Steps" required>
-
-            <label for="systolic">Systolic Blood Pressure:</label>
-            <input type="number" id="systolic" name="systolic" required>
-
-            <label for="diastolic">Diastolic Blood Pressure:</label>
-            <input type="number" id="diastolic" name="diastolic" required>
-
-            <button type="submit">Submit</button>
+            <input type="submit" value="Predict">
         </form>
     </section>
 
     <section id="results">
         <h2>Your Sleep Quality Results</h2>
         <div id="results-container">
+            <p>Thank you for submitting your data!</p>
             <p>Your sleep quality analysis results will appear here.</p>
         </div>
         <a href="#input" class="btn">Input New Data</a>
@@ -220,7 +239,7 @@
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <p><strong>Q: What data do I need to provide for the sleep analysis?</strong></p>
-        <p>A: You will need to input your age, gender, sleep duration, quality of sleep, physical activity level, stress level, heart rate, daily steps, and blood pressure.</p>
+        <p>A: You will need to input your age, gender, occupation, sleep duration, stress level, BMI, and blood pressure for the analysis.</p>
         
         <p><strong>Q: How accurate is the sleep quality analysis?</strong></p>
         <p>A: The analysis is based on data collected from previous research and health guidelines, but it should not replace medical advice. It provides an estimate based on your input data.</p>
@@ -228,5 +247,8 @@
         <p><strong>Q: Can I use the tool on mobile devices?</strong></p>
         <p>A: Yes, the tool is designed to be responsive and can be used on most modern smartphones and tablets.</p>
     </section>
+
+    <script src="static/js/app.js"></script>
+
 </body>
 </html>
