@@ -230,8 +230,17 @@
     <section id="results">
         <h2>Your Sleep Quality Results</h2>
         <div id="results-container">
-            <p>Thank you for submitting your data!</p>
-            <p>Your sleep quality analysis results will appear here.</p>
+            
+            <div id="results-container">
+                <p>Thank you for submitting your data!</p>
+            
+                {% if prediction %}
+                    <p>Your predicted sleep disorder is: <strong>{{ prediction }}</strong></p>
+                {% else %}
+                    <p>Your sleep quality analysis results will appear here.</p>
+                {% endif %}
+            </div>
+            
         </div>
         <a href="#input" class="btn">Input New Data</a>
     </section>
