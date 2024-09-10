@@ -11,7 +11,7 @@ logistic_model = joblib.load(model_path)
 
 @app.route('/')
 def home():
-    return render_template('merged.html')
+    return render_template('Main.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -78,7 +78,7 @@ def predict():
     
     # Output prediction result
     # return f'Predicted Sleep Disorder: {prediction[0]}' - changing this one because we want to results show on the same page. 
-    return render_template('merged.html', prediction=prediction[0])
+    return render_template('Main.html', prediction=prediction[0])
 
 
 if __name__ == '__main__':
