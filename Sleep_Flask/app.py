@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request
 import pandas as pd
-import joblib  # Assuming you saved your model using joblib
+import joblib
+import os
 
 app = Flask(__name__)
 
 # Load your pre-trained model (replace with your model file)
-logistic_model = joblib.load('../Final_Data/Resources/log_regression_model.pkl')
+model_path = os.path.join('..', 'Final_Data', 'Resources', 'log_regression_model.pkl')
+logistic_model = joblib.load(model_path)
 
 @app.route('/')
 def home():
