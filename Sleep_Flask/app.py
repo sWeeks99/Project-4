@@ -5,7 +5,7 @@ import joblib  # Assuming you saved your model using joblib
 app = Flask(__name__)
 
 # Load your pre-trained model (replace with your model file)
-logistic_model = joblib.load('../Final_Data/Resoturces/log_regression_model.pkl')
+logistic_model = joblib.load('../Final_Data/Resources/log_regression_model.pkl')
 
 @app.route('/')
 def home():
@@ -66,9 +66,11 @@ def predict():
         **bmi_data  # Unpack BMI dummy variables
     }
 
+    
     # Convert to DataFrame
     input_df = pd.DataFrame([input_data])
-    
+   
+    print(input_df)
     # Make prediction using the logistic regression model
     prediction = logistic_model.predict(input_df)
     
