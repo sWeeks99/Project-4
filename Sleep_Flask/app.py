@@ -11,7 +11,7 @@ logistic_model = joblib.load(model_path)
 
 @app.route('/')
 def home():
-    return render_template('test.html')
+    return render_template('Main.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():

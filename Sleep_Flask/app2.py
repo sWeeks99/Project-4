@@ -77,7 +77,9 @@ def predict():
     prediction = logistic_model.predict(input_df)
     
     # Output prediction result
-    return f'Predicted Sleep Disorder: {prediction[0]}'
+    # return f'Predicted Sleep Disorder: {prediction[0]}' - changing this one because we want to results show on the same page. 
+    return render_template('merged.html', prediction=prediction[0])
+
 
 if __name__ == '__main__':
     app.run(debug=True)
