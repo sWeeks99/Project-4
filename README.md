@@ -3,11 +3,11 @@
 <h1 align='center'>Project 4: Sleep Disorder Predictor</h1>
 </div>
 <h3 align='center'><a 
-href="https://docs.google.com/presentation/d/1axaM-g6KsCU3BL2MD_DiyBGnYvH5An_b1OsIsz29BAM/edit?usp=sharing">Slide Deck</a></h3>
+href="https://docs.google.com/presentation/d/1axaM-g6KsCU3BL2MD_DiyBGnYvH5An_b1OsIsz29BAM/edit?usp=sharing"><ins>Slide Deck</a></h3>/ins>
 </div>
 
 ## About
-*  <ins>Overview:<br></ins>
+*  <ins>Overview</ins>:<br></ins>
     Our project will focus on analyzing sleep quality by evaluating factors such as stress levels, blood pressure, and BMI ratings using machine learning and other advanced technologies we’ve studied. The model will be displayed on a user-interactive website, where the user can input their own data for personalized sleep quality assessment.
 
 ## How to Start
