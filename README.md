@@ -11,7 +11,8 @@ href="https://docs.google.com/presentation/d/1axaM-g6KsCU3BL2MD_DiyBGnYvH5An_b1O
             Our project will focus on analyzing sleep quality by evaluating factors such as stress levels, blood pressure, and BMI ratings using machine learning and other advanced technologies we’ve studied. The model will be displayed on a user-interactive website, where the user can input their own data for personalized sleep quality assessment.
 
 ## How to Start Webpage
-1. Open **GitBash** (Windows) or **Terminal** (Mac).
+*  <ins>Step 1</ins>:<br></ins>
+  Open **GitBash** (Windows) or **Terminal** (Mac).
 2. Install the flask-cors extension by running the following command: `pip install flask-cors`.
 3. Run [flask_api.py](Final_Data/flaskdata/flask_api.py) in GitBash/Terminal using the following command: `python app2.py`.
 > [!NOTE] 
