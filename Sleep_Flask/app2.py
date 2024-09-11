@@ -71,14 +71,6 @@ def predict():
     
     # Convert to DataFrame
     input_df = pd.DataFrame([input_data])
-    file_path_save = '../Final_Data/Resources/input_data.csv'
-    # Check if the saved file exists
-    if not os.path.isfile(file_path_save):
-    # If it doesn't exist save it to a CSV
-        input_df.to_csv(file_path_save, index=False)
-    else:
-    # If it does exist, add to it instead of overwriting
-        input_df.to_csv(file_path_save, mode='a', header=False, index=False)
    
     # Make prediction using the logistic regression model
     prediction = logistic_model.predict(input_df)
