@@ -1,7 +1,7 @@
 <a id="readme-top"></a>
 <div align='center'>
 <h1 align='center'>Project 4: </h1>
-    <h2Sleep Disorder Predictor</h2>
+    <h2 align='center'>Sleep Disorder Predictor </h2>
 </div>
 <h3 align='center'><a 
 href="https://docs.google.com/presentation/d/1axaM-g6KsCU3BL2MD_DiyBGnYvH5An_b1OsIsz29BAM/edit?usp=sharing"><ins>Slide Deck</a></h3>
