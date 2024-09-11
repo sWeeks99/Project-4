@@ -7,7 +7,7 @@ href="https://docs.google.com/presentation/d/1axaM-g6KsCU3BL2MD_DiyBGnYvH5An_b1O
 </div>
 
 ## About
-*  <ins><b>Overview:</b><br></ins>
+*  <ins>Overview:<br></ins>
     Our project will focus on analyzing sleep quality by evaluating factors such as stress levels, blood pressure, and BMI ratings using machine learning and other advanced technologies we’ve studied. The model will be displayed on a user-interactive website, where the user can input their own data for personalized sleep quality assessment.
 
 ## How to Start
