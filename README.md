@@ -23,4 +23,4 @@ href="https://docs.google.com/presentation/d/1axaM-g6KsCU3BL2MD_DiyBGnYvH5An_b1O
   Ctrl+Click the link in the response from GitBash/Terminal: `http://127.0.0.1:5000`
 
 ## Ethical Considerations
-* This webpage is only made as a fun experiment in creating a prediction model to detect sleep disorders based on several health and sleep related factors; it is in no way, shape, or form a certified method in sleep diagnostics. If you are concerned about your physical and mental health regarding sleep, please consult with primary care providers, not us.
+* This project was made for the purpose of a group experiment in creating a prediction model to detect sleep disorders based on several health and sleep related factors; it is in no way, shape, or form a certified method in sleep diagnostics. If you are concerned about your physical and mental health regarding sleep, please consult with primary care providers, not us.
