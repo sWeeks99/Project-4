@@ -31,8 +31,3 @@ Python, HTML, CSS, Flask, SQL, Tableau
 
 ## Ethical Considerations
 * This project was made for the purpose of a group experiment in creating a prediction model to detect sleep disorders based on several health and sleep related factors; it is in no way, shape, or form a certified method in sleep diagnostics. If you are concerned about your physical and mental health regarding sleep, please consult with primary care providers, not us.
-
-## Acknowledgements and References
-* XPert Learning Assistant
-* ChatGPT
-* Tableau
