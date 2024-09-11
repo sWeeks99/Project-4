@@ -5,8 +5,8 @@
 <h3 align='center'><a 
 href="https://docs.google.com/presentation/d/1axaM-g6KsCU3BL2MD_DiyBGnYvH5An_b1OsIsz29BAM/edit?usp=sharing"><ins>Slide Deck</a></h3>
 </div>
-<h4 align='center'><a 
-href="https://public.tableau.com/app/profile/sean.weeks/viz/Sleep_Tableau_Packaged_Workbook/Analysis"><ins>Tableau Public</a></h4>
+<h3 align='center'><a 
+href="https://public.tableau.com/app/profile/sean.weeks/viz/Sleep_Tableau_Packaged_Workbook/Analysis"><ins>Tableau Public</a></h3>
 </div>
 
 ## About
