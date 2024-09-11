@@ -14,8 +14,8 @@ href="https://docs.google.com/presentation/d/1axaM-g6KsCU3BL2MD_DiyBGnYvH5An_b1O
             * Python
             * HTML & CSS
             * Flask
-            *SQL
-            *Tableau
+            * SQL
+            * Tableau
             
 ## How to Start Webpage
 *  <ins>Step 1</ins>:<br></ins>
