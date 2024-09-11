@@ -1,2 +1,6 @@
 Age,Sleep Duration,Quality of Sleep,Physical Activity Level,Stress Level,Heart Rate,Daily Steps,systolic,diastolic,Gender_Female,Gender_Male,Occupation_Accountant,Occupation_Doctor,Occupation_Engineer,Occupation_Lawyer,Occupation_Manager,Occupation_Nurse,Occupation_Sales Representative,Occupation_Salesperson,Occupation_Scientist,Occupation_Software Engineer,Occupation_Teacher,BMI Category_Normal,BMI Category_Obese,BMI Category_Overweight
+<<<<<<< HEAD
 24,7.2,6,80,5,80,10000,120,79,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0
+=======
+50,3.0,5,60,8,80,7000,140,90,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0,1
+>>>>>>> ff48f630aa96caa9d733a92311b57386c0565601
