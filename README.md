@@ -16,7 +16,7 @@ href="https://docs.google.com/presentation/d/1axaM-g6KsCU3BL2MD_DiyBGnYvH5An_b1O
 *  <ins>Step 2</ins>:<br></ins>
   Install the flask-cors extension by running the following command: `pip install flask-cors`.
 *  <ins>Step 3</ins>:<br></ins>
-  Run [flask_api.py](Final_Data/flaskdata/flask_api.py) in GitBash/Terminal using the following command: `python app2.py`.
+  Run ['flask_api.py'](Final_Data/flaskdata/flask_api.py) in GitBash/Terminal using the following command: `python app2.py`.
 > [!NOTE] 
 > Make sure you are in the file's directory prior to entering the above command.
 *  <ins>Step 4</ins>:<br></ins>
