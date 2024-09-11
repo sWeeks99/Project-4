@@ -71,8 +71,8 @@ def predict():
     
     # Convert to DataFrame
     input_df = pd.DataFrame([input_data])
+    input_df.to_csv('../Final_Data/Resources/input_data.csv', index=False)
    
-    print(input_df)
     # Make prediction using the logistic regression model
     prediction = logistic_model.predict(input_df)
     
