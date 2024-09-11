@@ -20,8 +20,6 @@ Python, HTML, CSS, Flask, SQL, Tableau
   Install the flask-cors extension by running the following command: `pip install flask-cors`
 *  <ins>Step 3</ins>:<br></ins>
   Run `flask_api.py` in GitBash/Terminal using the following command: `python app2.py`
-> [!NOTE] 
-> Make sure you are in the file's directory prior to entering the above command.
 *  <ins>Step 4</ins>:<br></ins>
   Ctrl+Click the link in the response from GitBash/Terminal: `http://127.0.0.1:5000`
 
