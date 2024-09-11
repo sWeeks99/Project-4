@@ -10,6 +10,13 @@ href="https://docs.google.com/presentation/d/1axaM-g6KsCU3BL2MD_DiyBGnYvH5An_b1O
 *  <ins>Overview</ins>:<br></ins>
             Our project will focus on analyzing sleep quality by evaluating factors such as stress levels, blood pressure, and BMI ratings using machine learning and other advanced technologies we’ve studied. The model will be displayed on a user-interactive website, where the user can input their own data for personalized sleep quality assessment.
 
+*  <ins>Software and Language Used</ins>:<br></ins>
+Python
+HTML & CSS
+Flask
+SQL
+Tableau
+            
 ## How to Start Webpage
 *  <ins>Step 1</ins>:<br></ins>
   Open **GitBash** (Windows) or **Terminal** (Mac).
