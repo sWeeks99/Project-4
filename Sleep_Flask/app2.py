@@ -83,9 +83,18 @@ def predict():
     # Make prediction using the logistic regression model
     prediction = logistic_model.predict(input_df)
     
-    # Output prediction result
-    # return f'Predicted Sleep Disorder: {prediction[0]}' - changing this one because we want to results show on the same page. 
-    return render_template('Main.html', prediction=prediction[0])
+     # Suggestions based on the prediction result
+    suggestions = {
+        'Insomnia': 'It is recommended to see a doctor for further evaluation and treatment.',
+        'Sleep Apnea': 'Consider a sleep study and consult with a healthcare professional.',
+        'none': 'Maintain a healthy lifestyle to continue having good sleep quality.'
+    }
+
+     # Get the suggestion based on the predicted disorder
+    suggestion = suggestions.get(prediction[0], "Please consult a healthcare professional for more information.")
+
+    # Return the template with both prediction and suggestion
+    return render_template('Main.html', prediction=prediction[0], suggestion=suggestion)
 
 
 if __name__ == '__main__':
