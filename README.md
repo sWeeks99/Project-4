@@ -31,4 +31,4 @@ Python, HTML, CSS, Flask, SQL, Tableau
 * Dataset retreived from [Kaggle](https://www.kaggle.com/code/amalyasser/shhh-i-want-to-sleep/input)
 
 ## Ethical Considerations
-* This project was made for the purpose of a group experiment in creating a prediction model to detect sleep disorders based on several health and sleep related factors; it is in no way, shape, or form a certified method in sleep diagnostics. If you are concerned about your physical and mental health regarding sleep, please consult with primary care providers, not us.
+* This project is a group experiment for the purpose of developing a predictive model for determining sleep disorders based on various health and sleep-related factors. It is not officially certified for diagnosing sleep disorders. If any are concerned about their physical and/or mental health pertaining to sleep, please consult a licensed healthcare provider for professional advice.
