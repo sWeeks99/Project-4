@@ -151,6 +151,15 @@
         .btn:hover {
             background-color: #552b91;
         }
+        .custom-link {
+        color: #52bff1; /* Choose any color you like */
+        text-decoration: underline;
+    }
+
+.custom-link:hover {
+    color: #f800f0; /* Change color on hover, optional */
+}
+
 
         /* Footer Links */
         footer {
@@ -179,6 +188,28 @@
             margin-bottom: 15px;
             color: white;
         }
+        /* Info Section */
+        #info {
+            background-color: rgba(95, 73, 184, 0.8);
+            padding: 20px;
+            margin: 20px auto;
+            width: 60%;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+
+        #info h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        #info p {
+            text-align: left;
+            margin-bottom: 15px;
+            color: white;
+        }
+        
     </style>
 </head>
 <body>
@@ -188,6 +219,7 @@
         <a href="#home">Home</a>
         <a href="#input">Input Data</a>
         <a href="#faq">FAQ</a>
+        <a href="#info">Important Information</a>
     </div>
 
     <header id="home">
@@ -297,12 +329,20 @@
         <p><strong>Q: What data do I need to provide for the sleep analysis?</strong></p>
         <p>A: You will need to input your age, gender, occupation, sleep duration, stress level, BMI, and blood pressure for the analysis.</p>
         
-        <p><strong>Q: How accurate is the sleep quality analysis?</strong></p>
-        <p>A: The analysis is based on data collected from previous research and health guidelines, but it should not replace medical advice. It provides an estimate based on your input data.</p>
+        <p><strong>Q: What if I don't know my Blood Pressure?</strong></p>
+        <p> You can always check your blood pressure with a handy sphygmomanometer. However, if you don't have that,
+            you can follow <a href="https://www.medindia.net/patients/calculators/bp-chart-result.asp" class="custom-link" target="_blank">this link</a> to estimate what range fits best for you. </p>
+        
+     </section>
 
-        <p><strong>Q: Can I use the tool on mobile devices?</strong></p>
-        <p>A: Yes, the tool is designed to be responsive and can be used on most modern smartphones and tablets.</p>
-    </section>
+     <!-- Important Info Section -->
+    <section id="info">
+        <h2>Important Information</h2>
+        <p>Please note that this is a model prediction based on collective research. It should not replace medical advice. 
+            If you are concerned about your result,
+            please consider consulting with your Primary Care Provider. The result you get doesn't necesarily mean you have said sleep disorder, but it is a prediction based on factors you've inputted. 
+        </p>
 
+     </section>
 </body>
 </html>
