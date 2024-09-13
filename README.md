@@ -19,7 +19,9 @@ href="https://public.tableau.com/app/profile/sean.weeks/viz/Sleep_Tableau_Packag
 
 *  <ins>Software and Language Used</ins>:<br></ins>
 Python, HTML, CSS, Flask, SQL, Tableau
-            
+
+- **Finalized data is found in the `Final_Data` folder.**
+
 ## How to Start Webpage
 *  <ins>Step 1</ins>:<br></ins>
   Open **GitBash** (Windows) or **Terminal** (Mac).
