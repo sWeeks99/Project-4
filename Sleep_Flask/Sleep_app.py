@@ -77,8 +77,8 @@ def predict():
     
      # Suggestions based on the prediction result
     suggestions = {
-        'Insomnia': 'It is recommended to see a doctor for further evaluation and treatment.',
-        'Sleep Apnea': 'Consider a sleep study and consult with a healthcare professional.',
+        'Insomnia': 'If you believe you have insomnia, please consult a doctor for further evaluation. Doctors may recommend treating the root cause of insomnia which could be stress or other medical concerns. If it’s severe enough they may recommend behavioral therapy and other medicines to improve your sleep quality.',
+        'Sleep Apnea': 'If you believe you have sleep apnea, please consult a doctor for further evaluation. Doctors may suggest certain lifestyle changes which could help your situation. However, the standard treatment for sleep apnea is to get a CPAP(Continuous Positive Airway Pressure) mask/machine for sleeping.',
         'none': 'Maintain a healthy lifestyle to continue having good sleep quality.'
     }
 
